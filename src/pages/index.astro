@@ -1,11 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
+import Card from '../components/Card.astro';
 ---
 
-<Layout title="Run Porfolio.">
-	<main>		
-		<h1>hola mundo</h1>
+<Layout title="Run Porfolio">
+	<main>
+		
+		<h1>Welcome to <span class="text-gradient">Astr</span></h1>		
+		<Card
+				href="mama"
+				title="Documentation"
+				body="Learn how Astro works and explore the official API docs."
+			/>		
 	</main>
 </Layout>
 
