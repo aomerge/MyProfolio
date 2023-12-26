@@ -1,0 +1,22 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	href: string;
+    Class: string | null;
+}
+import NavHeader from './navs/headerNav.astro'
+
+const { href, title, body, Class } = Astro.props;
+---
+<header class={ Class }>
+    <div class="">
+        <div class="col-12">                
+            <a href="{{ href }}" class="hover:text-red-800 ">
+                <h class=" font-bold text-3xl">{ title }</h1>
+            </a>
+            <p class=" text-s ">{ body }</p>
+        </div>        
+    </div>
+    <NavHeader />
+</header>

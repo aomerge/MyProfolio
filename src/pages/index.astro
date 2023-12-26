@@ -1,17 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Header from '../components/header.astro';
 ---
 
 <Layout title="Run Porfolio">
-	<main>
-		
-		<h1>Welcome to <span class="text-gradient">Astr</span></h1>		
-		<Card
-				href="mama"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>		
+	<main class=" text-cyan-50 grid grid-cols-12">
+		<div class=" row-start-1 z-10 col-start-1 col-span-12  w-full h-60" style=" background: rgb(255,255,255);
+		background: radial-gradient(circle at 50% -280%, rgba(0, 146, 250, 0.437) 20%, rgba(32, 34, 38,0.018644957983193322) 80%); "></div>
+		<section class=" mt-10 z-20 row-start-1 col-start-2 col-end-11 bg-transparent" >
+			<Header Class={" flex justify-between mb-10"} title="OEMERGE" body='Software Developer' href='asde' />
+			<h1>Welcome to <span class="text-gradient">Astro</span></h1>						
+		</section>
 	</main>
 </Layout>
 
