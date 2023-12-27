@@ -1,22 +1,26 @@
 ---
 interface Props {
-    id: number;
+    id: string | number;
 	title: string;
 	body: string;
 	href: string;
+    image: string;
 }
 
-const { id, href, title, body } = Astro.props;
+const { id, href, title, body, image } = Astro.props;
 ---
 
-<section>
-    <div>
-        <h2><span>{id}</span>{title}</h2>
-        <p>{body}</p>
-        <span>Etiquetas</span>
-        <a href={href}>More shots from this project ↗</a>
+<section class=" border-b-2 border-gray-500 border-spacing-5 mt-20 pb-36 flex justify-between gap-28 " style="max-width: 1120px; max-height: 473px;">
+    <div class="w-2/3">
+        <h2 class="text-2xl mb-5 font-semibold"><span>0{id} </span>/ {title}</h2>
+        <p class=" text-gray-300 mb-7">{body}</p>
+        <span class=" text-gray-400 text-sm mb-11">Sculpted in ZBrush, Retopologized and UVs done in Maya, Textured in Mari, Rendered using Arnold.</span>
+        <br >
+        <p class=" mt-16">
+            <a class=" mb-9" href={href}>More shots from this project ↗</a>
+        </p>
     </div>
-    <div>
-        <img src="https://picsum.photos/400/300" alt="Imagem do projeto" />
+    <div class=" bg-slate-50 overflow-hidden " style="width: 640px; height:264.678px; ">
+        <img width="1120" height="473" src="https://picsum.photos/400/300" alt="Imagem do projeto" />
     </div>
 </section>

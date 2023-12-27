@@ -1,3 +1,15 @@
 ---
-
+import CardWork from "./cards/cardWork.astro";
+const array = [
+    {id: 1, title: "PROJECT NAME", description: "Goblin concept digital sculpture with human-like skin. Learned a lot of quick tips and look development.", image: "image", link: "link"},
+    { id: 2 ,title: "PROJECT NAME", description: "Subsurface weight, specular roughness, diffuse maps generated with the procedure and manual techniques.", image: "image", link: "link"},
+]
 ---
+<section class=" my-16">
+    {
+        array.map((item) => (
+            <CardWork id={ item.id?.toString() } title={item.title} body={item.description} image={item.image} href={item.link}/>
+        ))
+    }
+</section>
+
