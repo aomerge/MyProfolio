@@ -1,0 +1,22 @@
+---
+interface Props {
+    id: number;
+	title: string;
+	body: string;
+	href: string;
+}
+
+const { id, href, title, body } = Astro.props;
+---
+
+<section>
+    <div>
+        <h2><span>{id}</span>{title}</h2>
+        <p>{body}</p>
+        <span>Etiquetas</span>
+        <a href={href}>More shots from this project ↗</a>
+    </div>
+    <div>
+        <img src="https://picsum.photos/400/300" alt="Imagem do projeto" />
+    </div>
+</section>

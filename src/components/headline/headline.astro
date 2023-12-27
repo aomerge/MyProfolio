@@ -1,0 +1,16 @@
+---
+interface Props {
+	title: string;
+	body: string;
+}
+const hover = "hover:text-red-800";
+const {title, body} = Astro.props;
+---
+<section class=" mt-48 mb-44 flex justify-between">
+        <div class="w-1/2">
+            <h1 class=" text-4xl w-4/6">{title}</h1>
+        </div>
+        <div class=" mt-12 w-1/2 flex justify-end">
+            <p class=" text-xl w-11/12">{body}</p>
+        </div>
+</section>

@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Header from '../components/header.astro';
+import Headerline  from '../components/headline/headline.astro';
+import Arrow from "../components/button/arrow.astro";
 ---
 
 <Layout title="Run Porfolio">
@@ -10,7 +12,8 @@ import Header from '../components/header.astro';
 		background: radial-gradient(circle at 50% -280%, rgba(0, 146, 250, 0.437) 20%, rgba(32, 34, 38,0.018644957983193322) 80%); "></div>
 		<section class=" mt-10 z-20 row-start-1 col-start-2 col-end-11 bg-transparent" >
 			<Header Class={" flex justify-between mb-10"} title="OEMERGE" body='Software Developer' href='asde' />
-			<h1>Welcome to <span class="text-gradient">Astro</span></h1>						
+			<Headerline title='Hello, I’m Mehmet Akif.' body='A senior-year design student who trying to specialize in 3D modeling & texturing.' />
+			<Arrow />		
 		</section>
 	</main>
 </Layout>
