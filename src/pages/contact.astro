@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro';
+interface Props{
+    phone: string;
+    email: string;
+    address: string;
+    facebook: string;
+    twitter: string;
+    instagram: string;
+    youtube: string;
+}
+const { phone, email, address, facebook, twitter, instagram, youtube } = Astro.props;
+---
+<Layout page="contact" title="About Me">
+  <main class="max-w-6xl mt-20 text-cyan-50 grid grid-cols-12">
+    <section class="z-20 row-start-1 col-start-2 col-end-12 bg-transparent">      
+
+        <section class=" max-sm:flex-col-reverse max-sm:justify-center max-sm:items-center flex justify-between gap-7">
+            <div class="w-1/2 max-sm:w-full">
+                <div class=" bg-slate-400 w-52 h-52 overflow-hidden max-sm:rounded-2xl rounded-full">
+                    <img src="https://picsum.photos/400/300" alt="image" />
+                </div>
+                <div class="my-10">
+                    <h2 class=" mb-2 text-gray-500 font-bold  text-xl">Contact Details</h2>
+                    <p>{phone}</p>
+                    <p>{email}</p>
+                    <p>{address}</p>
+                </div>
+                <div class="my-10">
+                    <h2 class="mb-2 text-gray-500 font-bold  text-xl">Social</h2>
+                    <ul>
+                        <li class="flex text-xl  items-center">
+                            <svg fill="rgb(209 213 219)"  aria-hidden="true" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="h-6 mr-3">
+                                <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+                            </svg> 
+                            <a href={facebook}>Github</a>
+                        </li>
+                        <li class="flex text-xl  items-center" ><svg fill="rgb(209 213 219)" viewBox="0 0 24 24" aria-hidden="true" class=" mr-3 h-6 text-gray-300"><g ><path  class="bg-gray-300" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" ></path></g></svg><a href={twitter}>Twitter</a></li>
+                        <li class="flex text-xl  items-center">
+                            <svg fill="rgb(209 213 219)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" class="h-6 mr-3"  focusable="false">
+                                <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
+                            </svg>
+                            <a href={instagram}>Instagram</a>
+                        </li>                        
+                    </ul>
+                </div>
+            </div>
+            <div class="w-1/2 max-sm:mb-9 max-sm:w-full">
+                <h1 class=" text-center font-extrabold text-4xl mb-10 text-orange-500">Let’s build something cool together</h1>
+                <p class=" text-gray-500 mb-10">Do you have a project you would like me to work on? Or maybe you just want to say hi? Feel free to send me a message using the form below.</p>
+                <form action="" class="grid  gap-8 " method="post">
+                    <div class=" flex flex-col">
+                        <label class="mb-3" for="name">Name</label>
+                        <input class=" bg-transparent border-b-2 border-gray-400 pb-5 text-gray-300" type="text" name="name" id="name" placeholder="James Robert" />
+                    </div>
+                    <div class=" flex flex-col ">
+                        <label class="mb-3" for="email">Email</label>
+                        <input class="  text-gray-300 bg-transparent border-b-2 border-gray-400 pb-5" type="email" name="email" id="email" placeholder="ayush.barnwal@brightscout.com" />
+                    </div>
+                    <div class=" flex flex-col ">
+                        <label class="mb-3" for="subject">Subject</label>
+                        <input class="  text-gray-300 bg-transparent border-b-2 border-gray-400 pb-5" type="email" name="email" id="email" placeholder="For web design work Enquire" />
+                    </div>
+                    <div class=" flex flex-col ">
+                        <label class="mb-3" for="message">Message</label>
+                        <textarea class=" h-32 bg-transparent border-b-2 pb-5 border-gray-400" name="message" id="message" cols="30" rows="10" placeholder="Your message"></textarea>
+                    </div>
+                    <div class=" w-1/2">
+                        <button class=" w-full bg-orange-500  rounded-3xl px-1 py-[5px]" type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </section>
+  </main>
+</Layout>

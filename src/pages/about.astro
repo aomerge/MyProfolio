@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeaderAbout from '../components/headline/headerlineAbout.astro';
+import Email from '../components/contact/email.astro';
+import Jobs from '../components/cards/cardJobs.astro';
+---
+
+<Layout page="about" title="About Me">
+  <main class="max-w-6xl mt-20 text-cyan-50 grid grid-cols-12">
+    <section class="z-20 row-start-1 col-start-2 col-end-12 bg-transparent">
+      <HeaderAbout
+        title="Hi I’m Mehmet Akif Karasu, 3D artist & sculptor."
+        ,
+        description="My work is mainly focused on third-dimension modeling, texturing and rendering. I like exploring the creatures with a touch of dark surrealism for characters and production. | Now I’m an interactive media design student in Istanbul ⏤ currently freelancing and seeking internship opportunities."
+      />
+      <Email email='Codenode@gmail.com' />
+      <Jobs />
+    </section>
+  </main>
+</Layout>

@@ -3,14 +3,15 @@ interface Props {
 	title: string;
 	body: string;
 }
-const hover = "hover:text-red-800";
 const {title, body} = Astro.props;
+const color ="text-orange-500";
 ---
-<section class=" mt-48 mb-44 flex justify-between">
-        <div class="w-1/2">
-            <h1 class=" text-4xl w-4/6">{title}</h1>
+
+<section class=" mt-48 mb-44 flex max-sm:mt-10 max-sm:mb-10 max-sm:flex-col max-sm:w-full justify-between">
+        <div class="w-1/2 max-sm:w-full">
+            <h1 class={" font-extrabold w-5/6 text-5xl " + color} >{title}</h1>
         </div>
-        <div class=" mt-12 w-1/2 flex justify-end">
+        <div class=" mt-12 w-1/2 max-sm:mt-5 max-sm:text-gray-400  max-sm:mb-20 max-sm:w-full flex justify-end">
             <p class=" text-xl w-11/12">{body}</p>
         </div>
 </section>

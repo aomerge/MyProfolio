@@ -1,9 +1,15 @@
 ---
-const hover = "hover:text-red-800";
+interface Props {
+    page: string
+}
+const { page } =  Astro.props;
+const style = " text-gray-400 pb-1  ";
+const hover = " hover:text-orange-500 hover:border-orange-500 hover:border-b-2 ";
+const active = " text-gray-300 border-b-2 pb-[4px] border-spacing-x-7  border-gray-300  ";
 ---
-<nav class="  flex items-center justify-center  gap-8">
-    <a href="" class={hover}>Work</a>
-    <a href="" class={hover}>About</a>
-    <a href="" class={hover}>Blog</a>
-    <a href="" class={hover}>Contact</a>
+<nav class=" max-[600px]:hidden  flex items-center justify-center  gap-8">
+    <a  href="http://localhost:4321/" class={ page === "work" ? hover + active : style + hover }>Work</a>
+    <a href="./about" class={page === "about" ? hover + active : style + hover}>About</a>
+    <a href="./blog" class={page === "blog" ? hover + active : style + hover}>Blog</a>
+    <a href="./contact" class={page === "contact" ? hover + active : style + hover}>Contact</a>
 </nav>

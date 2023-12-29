@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro'
+import HeadlineBlog from '../components/headline/headlineBlog.astro';
+import Hifigth from '../components/button/hifigth.astro';
+import About from '../components/cards/aboutBlog.astro';
+import Works from '../components/works.astro';
+---
+<Layout title='Blog' page='blog'  >  
+  <HeadlineBlog />
+  <Hifigth />
+  <main class="max-w-6xl mt-[500px] text-cyan-50 grid grid-cols-12">
+    <section class="z-20 row-start-1 col-start-2 col-end-12 bg-transparent">              
+        <About />
+        <Works />
+    </section>
+  </main>
+</Layout>
+

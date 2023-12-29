@@ -4,19 +4,16 @@ interface Props {
 	body: string;
 	href: string;
     Class: string | null;
+    page: string;
 }
 import NavHeader from './navs/headerNav.astro'
+import Logo from '../components/logo/logo.astro'
 
-const { href, title, body, Class } = Astro.props;
+const { page, href, title, body, Class } = Astro.props;
 ---
 <header class={ Class }>
-    <div class="">
-        <div class="col-12">                
-            <a href="{{ href }}" class="hover:text-red-800 ">
-                <h class=" font-bold text-3xl">{ title }</h1>
-            </a>
-            <p class=" text-l ">{ body }</p>
-        </div>        
-    </div>
-    <NavHeader />
+    <section class="flex col-start-2 col-end-12 justify-between  w-full max-sm:justify-center  ">
+        <Logo href={href} title={title} body={body} />
+        <NavHeader page={page} />     
+    </section>
 </header>

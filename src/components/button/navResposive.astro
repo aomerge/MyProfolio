@@ -1,0 +1,38 @@
+---
+import NavResponsive from '../navs/headerNav.astro';
+import Nav from '../navs/navResponsive.astro';
+import Closed from '../button/closed.astro';
+// creamos un evento para el boton menu responsive al hacer clock en el boton
+
+
+
+---
+<section id="menu" class=" hidden nev fixed top-0 bg-gray-900  w-full h-screen z-50 text-gray-300  opacity-90">    
+    <Closed />
+    <Nav/>        
+</section>
+<button id="miBoton" class=" menu border sm:hidden fixed right-8 bottom-8 z-50">
+    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 80 80" fill="none">
+        <rect x="0.5" y="0.5" width="79" height="79" rx="39.5" fill="#0B0C0E" stroke="#0B0C0E"/>
+        <line x1="20.2837" y1="38.0005" x2="60.2837" y2="38.0005" stroke="#F4F7FA" stroke-width="2"/>
+        <line x1="20.2847" y1="46.0005" x2="60.2847" y2="46.0005" stroke="#F4F7FA" stroke-width="2"/>
+    </svg>
+</button>
+<script>
+  const boton = document.getElementById('miBoton');
+  const cloded = document.getElementById('closed');
+  const menu = document.getElementById('menu');
+
+    boton?.addEventListener('click', function() {
+        menu?.classList.remove('hidden');
+        menu?.classList.add('block');
+        boton?.classList.remove('block');
+        boton?.classList.add('hidden');
+    });
+    cloded?.addEventListener('click', function() {
+        menu?.classList.remove('block');
+        menu?.classList.add('hidden');
+        boton?.classList.remove('hidden');
+        boton?.classList.add('block');
+    });
+</script>
