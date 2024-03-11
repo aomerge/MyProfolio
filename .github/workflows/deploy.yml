@@ -1,31 +1,85 @@
-name: Build and Deploy
-run-name: Build and Deploy in GitHub Pages
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to Pages
+run-name: Deploy to GitHub Pages
 on:
+  # Runs on pushes targeting the default branch
   push:
-    branches:
-      - main  # Asegúrate de cambiar 'main' por el nombre de tu rama principal si es diferente
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Build in Node.js"]
+    types:
+      - completed
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  actions: read
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
+  # Single deploy job since we're just deploying
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
         with:
-          persist-credentials: false
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20'  # Especifica la versión de Node.js que prefieras
+          node-version: "20"
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build
+      - name: build
         run: npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: create artifact
+        uses: actions/upload-artifact@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist  # El directorio que Astro genera al construir el sitio
+          name: build-artifact-${{ github.run_id }}
+          path: ./dist
+  deploy:
+    needs: build
+    environment:
+      name: deploy-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: List artifacts
+        run: |
+          curl \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/repos/${{ github.repository }}/actions/artifacts
+
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build-artifact-${{ github.run_id }}
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload page artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          name: Upload artifact
+          # Upload entire repository
+          path: "./"
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifact_name: Upload artifact
