@@ -1,35 +1,26 @@
 {
   "projects": [
-    {      
+    {
       "title": " Meeteng ",
       "date": "2024",
       "description": "Desarrolle una API RESFUL con Spring Boot, la cual permite a los usuarios agendar reuniones, en la cual se pueden agregar participantes, ver la disponibilidad de los mismos y enviar notificaciones por correo electronico.",
-      "image": "image",
-      "link": "link",
-      "tags": [
-        "java",         
-        "Postgres",
-        "Spring Boot"
-      ]
+      "image": "./image/Meeting.jpeg",
+      "link": "https://github.com/aomerge/Meeting",
+      "tags": ["java", "Postgres", "Spring Boot"]
     },
-    {      
+    {
       "title": "React Clone ",
       "date": "2022",
       "description": "Logre crear un clon del arbol de elementos del dom de React y hacer uso de useSatate para su uso con vanila Javascript. Consegi una correcta comunicacion entre elementos para su posterior utilizacion.",
       "image": "./image/ReactClone.jpeg",
       "link": "https://github.com/aomerge/ReactClone",
-      "tags": [
-        "Typescript",
-        "JavaScript",
-        "HTML",
-        "CSS"
-      ]
+      "tags": ["Typescript", "JavaScript", "HTML", "CSS"]
     },
-    {      
+    {
       "title": "School ASP",
       "date": "2023",
       "description": "SchoolAsp es una aplicación web desarrollada en ASP.NET, enfocada en aligerar la carga administrativa en instituciones educativas y fomentar la comunicación entre estudiantes, profesores y padres.",
-      "image": "image",
+      "image": "./image/Schoolasp.jpeg",
       "link": "https://github.com/aomerge/SchoolAsp",
       "tags": [
         "ASP.NET",
@@ -42,141 +33,73 @@
         "Doker"
       ]
     },
-    {      
+    {
       "title": "Avo Stored",
       "date": "2022",
       "description": "Avo Stored es una aplicación de comercio electrónico web que desarrollé para la venta de aguacates de alta calidad.",
-      "image": "image",
-      "link": "link",
+      "image": "./image/Avo.jpeg",
+      "link": "https://github.com/aomerge/Avo-Stored",
       "tags": ["React", "Node.js", "Express", "NEXT JS", "Git"]
     },
-    {      
+    {
       "title": "Solid Credit ",
       "date": "2022",
       "description": "Solid Credit es una potente biblioteca que desarrollé para la generación de tablas de amortización de créditos.",
-      "image": "image",
-      "link": "link",
+      "image": "./image/SolidCredit.jpeg",
+      "link": "https://github.com/aomerge/SolidCredit",
       "tags": ["Node.js", "Typescript", "Git"]
     },
-    {      
+    {
       "title": "Tetris Rush ",
       "date": "2022",
       "description": "This repository hosts my personal rendition of the classic Tetris game, implemented entirely in Vanilla JavaScript. ",
-      "image": "image",
-      "link": "link",
+      "image": "./image/TetrisRush.jpeg",
+      "link": "https://github.com/aomerge/TetrisRush",
       "tags": ["Node.js", "JavaScript", "React", "Git"]
     },
-    {      
+    {
       "title": "Pomodoro",
       "date": "2023",
       "description": "Pomodoro es una aplicacion multiplataforma creada con React Native, que permite a los usuarios administrar su tiempo de manera eficiente.",
-      "image": "image",
-      "link": "link",
+      "image": "./image/Pomodoro.jpg",
+      "link": "https://github.com/aomerge/pomodoroApp",
       "tags": ["React Native", "Node.js", "Git"]
     },
-    {      
-      "title": "login Api ASP ",
-      "date": "2022",
-      "description": "Login Api es una aplicación web desarrollada en ASP.NET, que permite a los usuarios registrarse, iniciar sesión y recuperar su contraseña.",
-      "image": "image",
-      "link": "link",
-      "tags": ["ASP.NET", "C#", "SQL Server", "Azure", "Entity Framework", "MVC", "Git","Doker"]
-    },
-    {      
-      "title": "Pockedex",
-      "date": "2022",
-      "description": "Pockedex es una aplicación web que desarrollé para la visualización de información sobre Pokémon , cuanta con una administracion de los pokemons guardados en tu galeria y un registro de usuario. Esta aplicación consume datos de una API externa publica y hace el registro de los datos en una api interna desarrollada para poder rantizar a los usuarios la disponibilidad y la seguridad de los datos.",
-      "image": "image",
-      "link": "https://github.com/aomerge/Pockedex",
-      "tags": [
-        "React Native",
-        "Express",
-        "Node.js",
-        "Git"
-      ]
-    },
-    {      
-      "title": "UX Designer Proyect",
-      "date": "2022",
-      "description": "Este proyecto es parte del proyecto del curso de MAUI, en el cual se desarrollo la interface de usuario de una aplicacion de un restauirante de comida rapida, en el cual se utilizo el diseño de la aplicacion en Figma y se desarrollo la aplicacion en Xamarin.",
-      "image": "image",
-      "link": "link",
-      "tags": [
-        "Xamarin",
-        "Figma",
-        ".NET",
-        "MAUI",
-        "Git"
-      ]
-    },
-    {      
+    {
       "title": "Zainab Porfolio",
       "date": "2022",
       "description": "Zainab Porfolio es una aplicación web que desarrollé para una diseñadora de Ux/Ui.",
-      "image": "image",
-      "link":"https://github.com/aomerge/SchoolAsp", 
-      "tags":["NEXT", "REACT", "CSS", "HTML", "JAVASCRIPT"]
+      "image": "./image/Zainab.jpeg",
+      "link": "https://github.com/aomerge/Zainab-Porfolio",
+      "tags": ["NEXT", "REACT", "CSS", "HTML", "JAVASCRIPT"]
     },
-    {      
-      "title": "TechNet Lite",
-      "date": "2022",
-      "description": "TechNet Lite es una aplicación que desarrollé durante una prueba técnica utilizando ASP.NET. Esta solución comprende una base de datos integrada, una API simple y vistas diseñadas para una interacción básica del usuario. A través de TechNet Lite, demostré mi capacidad para crear aplicaciones coherentes y funcionales en un marco de tiempo limitado, subrayando mi destreza técnica y mi enfoque orientado a la eficiencia",
-      "image": "image",
-      "link": "link",
-      "tags": [
-        "ASP.NET",
-        "C#",
-        "SQL Server",
-        "Azure",
-        "Entity Framework",
-        "MVC",
-        "Git"
-      ]
-    },
-    {      
+    {
       "title": "Cats and Dogs Classifier",
       "date": "2022",
       "description": "Este es un Proyecto de clasificacion de imagenes, en este caso clasifique las imagenes de perros y gatos. Utilice una red neuronal convolucional para clasificar las imagenes.",
-      "image": "image",
-      "link": "link",
-      "tags": [
-        "Python",
-        "Tensorflow",
-        "Keras",
-        "Git"
-      ]
-    },
-    {      
+      "image": "./image/cat-dog.jpeg",
+      "link": "https://github.com/aomerge/Classification-Cats-Dogs",
+      "tags": ["Python", "Tensorflow", "Keras", "Git"]
+    }
+  ],
+  "blog": [],
+  "inDeveloper": [
+    {
       "title": "API Ecommerce ",
       "date": "2022",
       "description": "Este es un Proyecto de API Restful desarrollado en Node.js, Express y MongoDB. La API permite a los usuarios realizar operaciones CRUD en una base de datos de productos.",
       "image": "image",
       "link": "https://github.com/aomerge/API-Ecommerce",
-      "tags": [
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "Git"
-      ]
+      "tags": ["Node.js", "Express", "MongoDB", "Git"]
     },
-    {      
+    {
       "title": "API Inventory Manager",
       "date": "2022",
       "description": "Este es un Proyecto de un Inventary Manager, creado con express y un ORM de base de datos.",
       "image": "image",
       "link": "link",
-      "tags": [
-        "Node.js",
-        "Express",
-        "Sequelize",
-        "Git"
-      ]
-    }
-  ],
-  "blog": [
-
-  ],
-  "inDeveloper":[
+      "tags": ["Node.js", "Express", "Sequelize", "Git"]
+    },
     {
       "id": 7,
       "title": "GPTBOT ",
@@ -191,6 +114,22 @@
       "description": "Subsurface weight, specular roughness, diffuse maps generated with the procedure and manual techniques.",
       "image": "image",
       "link": "link"
+    },
+    {
+      "title": "Pockedex",
+      "date": "2022",
+      "description": "Pockedex es una aplicación web que desarrollé para la visualización de información sobre Pokémon , cuanta con una administracion de los pokemons guardados en tu galeria y un registro de usuario. Esta aplicación consume datos de una API externa publica y hace el registro de los datos en una api interna desarrollada para poder rantizar a los usuarios la disponibilidad y la seguridad de los datos.",
+      "image": "image",
+      "link": "https://github.com/aomerge/Pockedex",
+      "tags": ["React Native", "Express", "Node.js", "Git"]
+    },
+    {
+      "title": "UX Designer Proyect",
+      "date": "2022",
+      "description": "Este proyecto es parte del proyecto del curso de MAUI, en el cual se desarrollo la interface de usuario de una aplicacion de un restauirante de comida rapida, en el cual se utilizo el diseño de la aplicacion en Figma y se desarrollo la aplicacion en Xamarin.",
+      "image": "image",
+      "link": "link",
+      "tags": ["Xamarin", "Figma", ".NET", "MAUI", "Git"]
     }
   ]
 }
