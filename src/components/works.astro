@@ -1,16 +1,44 @@
 ---
-import CardWork from "./cards/cardWork.astro";
-import data from "./data/data.json";
-const projects = data.projects;
----
-<section class=" my-16">
-    {
-        projects.map((item, index) => {
-            let i =  index + 1;
-            return(
-                <CardWork tags={item.tags} id={ i.toString() } title={item.title} body={item.description} image={item.image} href={Array.isArray(item.link) ? item.link[0] : item.link}/>
-            )
-        })
-    }
-</section>
+interface Props {
+  type: number;
+}
+type BlogProps = {
+  tags: string[];
+  title: string;
+  description: string;
+  image: string;
+  link: string | string[];
 
+};
+
+const { type } = Astro.props;
+
+import CardWork from './cards/cardWork.astro';
+import data from './data/data.json';
+let projects: Array<BlogProps> = [];
+
+if (type === 1) {
+  projects = data.projects;
+}
+if (type === 2) {
+  projects = data.blog;
+}
+---
+
+<section class="my-16">
+  {
+    projects.map((item, index) => {
+      let i = index + 1;
+      return (
+        <CardWork
+          tags={item.tags}
+          id={i.toString()}
+          title={item.title}
+          body={item.description}
+          image={item.image}
+          href={Array.isArray(item.link) ? item.link[0] : item.link}
+        />
+      );
+    })
+  }
+</section>

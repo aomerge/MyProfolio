@@ -82,7 +82,32 @@
       "tags": ["Python", "Tensorflow", "Keras", "Git"]
     }
   ],
-  "blog": [],
+  "blog": [
+    {
+      "title": "Aprendiendo Flexbox: Técnicas y Ejemplos para un Diseño Web Responsivo.",
+      "date": "2024",
+      "description": "Flexbox es un módulo de CSS que proporciona una manera eficiente de diseñar interfaces de usuario complejas y responsivas. En este artículo, 'Aprendiendo Flexbox: Técnicas y Ejemplos para un Diseño Web Responsivo', se explorará cómo Flexbox facilita la organización de los elementos en la página, ofreciendo una visión detallada de sus métodos y aplicaciones prácticas.",
+      "image": "https://media.licdn.com/dms/image/D4E12AQEDwaOgu_lGNQ/article-cover_image-shrink_423_752/0/1712909821353?e=1720656000&v=beta&t=S9DXf4JF9DtdurpNtDmZdwumHJarQoUvDrRVqyqt0mk",
+      "link": "https://www.linkedin.com/pulse/aprendiendo-flexbox-t%25C3%25A9cnicas-y-ejemplos-para-un-dise%25C3%25B1o-%25C3%25A1ngel-ortega-qssye/",
+      "tags": ["React", "JavaScript", "HTML", "CSS"]
+    },
+    {
+      "title": "Diferencias entre Índices y Vistas en SQL: Mejorando el Rendimiento y la Organización de Datos",
+      "date": "2024",
+      "description": "En el mundo de las bases de datos SQL, los índices y las vistas son dos características fundamentales que, aunque sirven a propósitos diferentes, son esenciales para mejorar el rendimiento de las consultas y la organización de los datos. Aunque ambos pueden ser utilizados para acelerar las operaciones de recuperación de datos y simplificar las consultas complejas, sus roles, implementaciones y efectos en la base de datos son distintos. En este blog, exploraremos las diferencias clave entre índices y vistas en SQL, proporcionando ejemplos y consejos sobre cuándo y cómo usar cada uno.",
+      "image": "https://media.licdn.com/dms/image/D4E12AQEkF3Foh4n-fg/article-cover_image-shrink_423_752/0/1712712533174?e=1720656000&v=beta&t=LJKg-KQhbCaacNsM__7F30SAiWiTThnot1xt1S5UL24",
+      "link": "https://www.linkedin.com/pulse/diferencias-entre-%25C3%25ADndices-y-vistas-en-sql-mejorando-el-%25C3%25A1ngel-ortega-zqote/",
+      "tags": ["SQL"]
+    },
+    {
+      "title": "Implementación Práctica de Técnicas de Optimización de Almacenamiento en SQL",
+      "date": "2024",
+      "description": "La gestión eficiente del almacenamiento en bases de datos SQL es crucial para mantener un rendimiento óptimo, asegurar la escalabilidad y minimizar los costos. Las técnicas de optimización de almacenamiento en SQL no solo mejoran la velocidad de acceso a los datos sino que también contribuyen a la gestión eficaz de los recursos. En este blog, exploraremos diversas estrategias y técnicas para optimizar el almacenamiento en sistemas de bases de datos SQL.",
+      "image": "https://media.licdn.com/dms/image/D4E12AQEkF3Foh4n-fg/article-cover_image-shrink_423_752/0/1712712533174?e=1720656000&v=beta&t=LJKg-KQhbCaacNsM__7F30SAiWiTThnot1xt1S5UL24",
+      "link": "https://www.linkedin.com/pulse/implementaci%25C3%25B3n-pr%25C3%25A1ctica-de-t%25C3%25A9cnicas-optimizaci%25C3%25B3n-en-sql-%25C3%25A1ngel-ortega-panse/",
+      "tags": ["SQL"]
+    }
+  ],
   "inDeveloper": [
     {
       "title": "API Ecommerce ",
