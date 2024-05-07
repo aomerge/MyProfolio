@@ -1,48 +1,62 @@
 ---
 interface Props {
-    title: string;
-    description: string;
-
+  title: string;
+  description: string;
 }
 const { title, description } = Astro.props;
 const descriptionArray = description.split('|');
 const orange = 'text-orange-500';
-
 ---
 
 <section class="flex justify-between gap-10 border-b-2 border-gray-300 pb-32">
-    <div class="w-2/3 max-sm:w-full">
-        <h2 class={" font-bold text-5xl w-5/7 mb-10 "+ orange}>{title}</h2>             
-        {
-            descriptionArray.map((paragraph) => {
-                return <p class="mb-5 w-5/10">{paragraph}</p>
-            })
-        }
-        <section class=" ">
-            <div class=" mt-14 grid grid-cols-2 gap-5 justify-center items-center ">
-                <h3 class={" border-b-2 border-gray-400 w-2/3 pb-2 row-start-1 row-end-3 font-medium text-2xl "+ orange}>Main Softwere</h3>
-                <p>
-                    <span class={orange}>Frontend:</span> React, Next.js, TailwindCSS, Typescript
-                </p>
-                <p class=" col-start-2 ">
-                    <span class={orange}>Backend:</span> .NET, C#, jAVA, Spring, Entity Framework, SQL, MongoDB, Postgres, MYSQL
-                </p>
-            </div>            
-            <div class=" mt-20 grid grid-cols-2 gap-5 justify-center items-center">
-                <h3 class={" border-b-2 border-gray-400 w-2/3 pb-2 font-medium text-2xl row-end-4 row-start-1 "+ orange}>Main skils</h3>
-                <p>
-                    <span class={orange}>Networking:</span> Good comunication   
-                </p>
-                <p>
-                    <span class={orange}>Languages:</span> English (A2), Spanish (Native)
-                </p>                
-                <p>
-                    <span class={orange}>Other:</span> Git, Docker, Linux, Agile, Scrum, Kanban, GitActions
-                </p>
-            </div>            
-        </section>
-    </div>
-    <div class=" max-sm:hidden  h-[590px] w-[421px] overflow-hidden">        
-        <img class="h-full max-w-fit object-right-top object-none " src="./image/imag-about.jpg" alt=""/>
-    </div>
+  <div class="w-2/3 max-sm:w-full">
+    <h2 class={' font-bold text-5xl w-5/7 mb-10 ' + orange}>{title}</h2>
+    {
+      descriptionArray.map(paragraph => {
+        return <p class="mb-5 w-5/10">{paragraph}</p>;
+      })
+    }
+    <section class="">
+      <div class="mt-14 grid grid-cols-2 gap-5 justify-center items-center">
+        <h3
+          class={' border-b-2 border-gray-400 w-2/3 pb-2 row-start-1 row-end-3 font-medium text-2xl ' +
+            orange}
+        >
+          Main Softwere
+        </h3>
+        <p>
+          <span class={orange}>Frontend:</span> React, Next.js, TailwindCSS, Typescript
+        </p>
+        <p class="col-start-2">
+          <span class={orange}>Backend:</span> .NET, C#, jAVA, Spring, Entity Framework,
+          SQL, MongoDB, Postgres, MYSQL
+        </p>
+      </div>
+      <div class="mt-20 grid grid-cols-2 gap-5 justify-center items-center">
+        <h3
+          class={' border-b-2 border-gray-400 w-2/3 pb-2 font-medium text-2xl row-end-4 row-start-1 ' +
+            orange}
+        >
+          Main skils
+        </h3>
+        <p>
+          <span class={orange}>Networking:</span> Good comunication
+        </p>
+        <p>
+          <span class={orange}>Languages:</span> English (A2), Spanish (Native)
+        </p>
+        <p>
+          <span class={orange}>Other:</span> Git, Docker, Linux, Agile, Scrum, Kanban,
+          GitActions
+        </p>
+      </div>
+    </section>
+  </div>
+  <div class="max-sm:hidden h-[590px] w-[421px] overflow-hidden">
+    <img
+      class="h-full max-w-fit object-right-top object-none"
+      src="https://raw.githubusercontent.com/aomerge/MyProfolio/main/public/image/imag-about.jpg"
+      alt=""
+    />
+  </div>
 </section>
