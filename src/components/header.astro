@@ -1,19 +1,24 @@
 ---
 interface Props {
-	title: string;
-	body: string;
-	href: string;
-    Class: string | null;
-    page: string;
+  title: string;
+  body: string;
+  href: string;
+  Class: string | null;
+  page: string;
 }
-import NavHeader from './navs/headerNav.astro'
-import Logo from '../components/logo/logo.astro'
+import NavHeader from './navs/headerNav.astro';
+import Logo from '../components/logo/logo.astro';
 
 const { page, href, title, body, Class } = Astro.props;
 ---
-<header class={ Class }>
-    <section class="flex col-start-2 col-end-12 justify-between  w-full max-sm:justify-center  ">
+
+<header class={Class}>
+  <section
+    class="max-w-6xl grid grid-cols-12 w-full max-sm:justify-center"
+  >
+    <div class=" items-end col-start-2 col-end-12 flex justify-between">
         <Logo href={href} title={title} body={body} />
-        <NavHeader page={page} />     
-    </section>
+        <NavHeader page={page} />
+    </div>
+  </section>
 </header>

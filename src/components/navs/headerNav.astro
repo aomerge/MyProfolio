@@ -5,30 +5,102 @@ interface Props {
 const { page } = Astro.props;
 const style = ' text-gray-400 pb-1  ';
 const hover =
-  ' hover:text-orange-500 hover:border-orange-500 hover:border-b-2 ';
+  ' hover:text-gray-300  hover:bg-gray-800 hover:rounded-lg hover:px-2 hover:py-1';
 const active =
-  ' text-gray-300 border-b-2 pb-[4px] border-spacing-x-7  border-gray-300  ';
+  ' text-gray-300 border-b-2  pb-[4px] border-spacing-x-7  border-gray-300 hover:border-none  ';
 ---
 
 <nav class="max-[600px]:hidden flex items-center justify-center gap-8">
-  <a href="/MyProfolio/" class={page === 'work' ? hover + active : style + hover}
-    >Work</a
+  <a
+    href="/MyProfolio/"
+    class={page === 'work' ? hover + active : style + hover}
   >
+    <div class="flex gap-3">
+      <svg
+        aria-hidden="true"
+        height="16"
+        viewBox="0 0 16 16"
+        version="1.1"
+        width="16"
+        data-view-component="true"
+        class="fill-current relative top-[5px]"
+      >
+        <path
+          d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25ZM6.5 6.5v8h7.75a.25.25 0 0 0 .25-.25V6.5Zm8-1.5V1.75a.25.25 0 0 0-.25-.25H6.5V5Zm-13 1.5v7.75c0 .138.112.25.25.25H5v-8ZM5 5V1.5H1.75a.25.25 0 0 0-.25.25V5Z"
+        ></path>
+      </svg>
+      <span>Projects</span>
+    </div>
+  </a>
   <!-- <a
     href="/MyProfolio/certification"
     class={page === 'certification' ? hover + active : style + hover}
-    >Certification</a
+    >Certification
+    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-shield UnderlineNav-octicon d-none d-sm-inline">
+    <path d="M7.467.133a1.748 1.748 0 0 1 1.066 0l5.25 1.68A1.75 1.75 0 0 1 15 3.48V7c0 1.566-.32 3.182-1.303 4.682-.983 1.498-2.585 2.813-5.032 3.855a1.697 1.697 0 0 1-1.33 0c-2.447-1.042-4.049-2.357-5.032-3.855C1.32 10.182 1 8.566 1 7V3.48a1.75 1.75 0 0 1 1.217-1.667Zm.61 1.429a.25.25 0 0 0-.153 0l-5.25 1.68a.25.25 0 0 0-.174.238V7c0 1.358.275 2.666 1.057 3.86.784 1.194 2.121 2.34 4.366 3.297a.196.196 0 0 0 .154 0c2.245-.956 3.582-2.104 4.366-3.298C13.225 9.666 13.5 8.36 13.5 7V3.48a.251.251 0 0 0-.174-.237l-5.25-1.68ZM8.75 4.75v3a.75.75 0 0 1-1.5 0v-3a.75.75 0 0 1 1.5 0ZM9 10.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg></a
   > -->
   <a
     href="/MyProfolio/about"
-    class={page === 'about' ? hover + active : style + hover}>About</a
+    class={page === 'about' ? hover + active : style + hover}
   >
+    <div class="flex gap-3">
+      <svg
+        aria-hidden="true"
+        height="16"
+        viewBox="0 0 16 16"
+        version="1.1"
+        width="16"
+        data-view-component="true"
+        class="fill-current relative top-[5px]"
+      >
+        <path
+          d="M10.561 8.073a6.005 6.005 0 0 1 3.432 5.142.75.75 0 1 1-1.498.07 4.5 4.5 0 0 0-8.99 0 .75.75 0 0 1-1.498-.07 6.004 6.004 0 0 1 3.431-5.142 3.999 3.999 0 1 1 5.123 0ZM10.5 5a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z"
+        ></path>
+      </svg>
+      <span>About</span>
+    </div>
+  </a>
   <a
     href="/MyProfolio/blog"
-    class={page === 'blog' ? hover + active : style + hover}>Blog</a
+    class={page === 'blog' ? hover + active : style + hover}
   >
+    <div class="flex gap-3">
+      <svg
+        aria-hidden="true"
+        height="16"
+        viewBox="0 0 16 16"
+        version="1.1"
+        width="16"
+        data-view-component="true"
+        class="fill-current relative top-[5px]"
+      >
+        <path
+          d="M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z"
+        ></path>
+      </svg>
+      <span>Blog</span>
+    </div>
+  </a>
   <a
     href="/MyProfolio/contact"
-    class={page === 'contact' ? hover + active : style + hover}>Contact</a
+    class={page === 'contact' ? hover + active : style + hover}
   >
+    <div class="flex gap-3">
+      <svg
+        aria-hidden="true"
+        height="16"
+        viewBox="0 0 16 16"
+        version="1.1"
+        width="16"
+        data-view-component="true"
+        class="fill-current relative top-[5px]"
+      >
+        <path
+          d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"
+        ></path>
+      </svg>
+      <span>Contact</span>
+    </div>
+  </a>
 </nav>

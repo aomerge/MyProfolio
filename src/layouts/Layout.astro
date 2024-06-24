@@ -1,50 +1,56 @@
 ---
-import Footer from "../components/footer.astro";
-import Header from "../components/header.astro";
+import Footer from '../components/footer.astro';
+import Header from '../components/header.astro';
 interface Props {
-	title: string;
-	page: string;
+  title: string;
+  page: string;
 }
 
 const { title, page } = Astro.props;
-import Nav from '../components/button/navResposive.astro'
-
+import Nav from '../components/button/navResposive.astro';
 ---
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body class=" static w-full justify-center items-center flex flex-col ">
-		<div class=" absolute top-0 row-start-1 z-10 col-start-1 col-span-12  w-full h-96" style=" background: rgb(255,255,255);
-		background: radial-gradient(circle at 50% -280%, rgba(0, 146, 250, 0.635) 20%, rgba(32, 34, 38,0.018644957983193322) 80%); "></div>
-		<Header page={page} Class={" z-20 mt-9 max-w-6xl grid grid-cols-12 w-full  justify-between mb-4"} title="OEMERGE" body='Software Developer' href='asde' />
-		<slot />
-		<Footer />
-		<Nav />   
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="alternate icon" href="/favicon.ico" />
+	<link rel="stylesheet" href="/global.css" />
+	<link rel="stylesheet" href="./css/index.css">
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="static w-full justify-center items-center flex flex-col">
+    <Header
+      page={page}
+      Class={' bg-[#010409] ml-0 mr-0 z-20 pt-9 flex justify-center border-b-[1px] border-gray-500  w-full '}
+      title="OEMERGE"
+      body="Software Developer"
+      href="asde"
+    />
+    <slot />
+    <Footer />
+    <Nav />
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: rgb(32, 34, 38);
-		background-size: 224px;
-	}
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+  html {
+    font-family: system-ui, sans-serif;
+    background: #0d1117;
+    background-size: 224px;
+  }
 </style>
