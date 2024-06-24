@@ -1,0 +1,214 @@
+<section class="col-start-2">
+  <h1 class="text-3xl text-center font-bold text-orange-500">Dino Rush</h1>
+  <div id="controls" class="flex justify-between">
+    <button class="border border-gray-400 py-1 px-4 rounded-lg" id="stopBtn"
+      >Stop</button
+    >
+    <button class="border border-gray-400 py-1 px-4 rounded-lg" id="startBtn"
+      >Start</button
+    >
+  </div>
+  <div class="flex justify-center">
+    <canvas
+      id="gameCanvas"
+      class="w-[600px] h-[300px] rounded-lg border border-gray-400"></canvas>
+  </div>
+</section>
+
+<script type="module">
+  const canvas = document.getElementById('gameCanvas');
+  const ctx = canvas.getContext('2d');
+  const stopBtn = document.getElementById('stopBtn');
+  const startBtn = document.getElementById('startBtn');
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth * 0.8;
+    canvas.height = window.innerHeight * 0.7;
+    canvas.width = Math.max(canvas.width, 300);
+    canvas.height = Math.max(canvas.height, 200);
+  }
+
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  const game = {
+    dragon: {
+      x: 0.1,
+      y: 0.8,
+      width: 0.06,
+      height: 0.1,
+      jumping: false,
+      yVelocity: 0,
+      jumpStrength: -0.02,
+      gravity: 0.001,
+      speed: 0.01,
+    },
+    obstacle: {
+      x: 1,
+      y: 0.8,
+      width: 0.03,
+      height: 0.1,
+    },
+    score: 0,
+    gameOver: false,
+    paused: false,
+    victoryScore: 10,
+  };
+
+  function drawBackground() {
+    ctx.fillStyle = '#87CEEB';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = '#8B4513';
+    ctx.fillRect(0, canvas.height * 0.9, canvas.width, canvas.height * 0.1);
+  }
+
+  function drawDragon() {
+    ctx.fillStyle = 'green';
+    ctx.fillRect(
+      game.dragon.x * canvas.width,
+      game.dragon.y * canvas.height,
+      game.dragon.width * canvas.width,
+      game.dragon.height * canvas.height
+    );
+  }
+
+  function drawObstacle() {
+    ctx.fillStyle = 'red';
+    ctx.fillRect(
+      game.obstacle.x * canvas.width,
+      game.obstacle.y * canvas.height,
+      game.obstacle.width * canvas.width,
+      game.obstacle.height * canvas.height
+    );
+  }
+
+  function jump() {
+    if (!game.dragon.jumping) {
+      game.dragon.jumping = true;
+      game.dragon.yVelocity = game.dragon.jumpStrength;
+    }
+  }
+
+  function updateDragon() {
+    game.dragon.yVelocity += game.dragon.gravity;
+    game.dragon.y += game.dragon.yVelocity;
+
+    if (game.dragon.y > 0.8) {
+      game.dragon.y = 0.8;
+      game.dragon.jumping = false;
+      game.dragon.yVelocity = 0;
+    }
+  }
+
+  function moveDragon(direction) {
+    if (direction === 'left' && game.dragon.x > 0) {
+      game.dragon.x -= game.dragon.speed;
+    } else if (direction === 'right' && game.dragon.x < 1 - game.dragon.width) {
+      game.dragon.x += game.dragon.speed;
+    }
+  }
+
+  function checkCollision() {
+    return (
+      game.dragon.x < game.obstacle.x + game.obstacle.width &&
+      game.dragon.x + game.dragon.width > game.obstacle.x &&
+      game.dragon.y < game.obstacle.y + game.obstacle.height &&
+      game.dragon.y + game.dragon.height > game.obstacle.y
+    );
+  }
+
+  function drawMessage(message) {
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = 'white';
+    ctx.font = `${canvas.height * 0.08}px Arial`;
+    ctx.textAlign = 'center';
+    ctx.fillText(message, canvas.width / 2, canvas.height / 2);
+
+    ctx.font = `${canvas.height * 0.04}px Arial`;
+    ctx.fillText(
+      'Presiona cualquier tecla para reiniciar',
+      canvas.width / 2,
+      canvas.height * 0.6
+    );
+  }
+
+  function gameLoop() {
+    if (game.gameOver || game.paused) return;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    drawBackground();
+    updateDragon();
+    drawDragon();
+    drawObstacle();
+
+    game.obstacle.x -= 0.01;
+
+    if (game.obstacle.x < -game.obstacle.width) {
+      game.obstacle.x = 1;
+      game.score++;
+    }
+
+    if (checkCollision()) {
+      game.gameOver = true;
+      drawMessage('¡Juego terminado!');
+      return;
+    }
+
+    if (game.score >= game.victoryScore) {
+      game.gameOver = true;
+      drawMessage('¡Has ganado!');
+      return;
+    }
+
+    ctx.fillStyle = 'black';
+    ctx.font = `${canvas.height * 0.06}px Arial`;
+    ctx.textAlign = 'left';
+    ctx.fillText(
+      'Puntuación: ' + game.score,
+      canvas.width * 0.02,
+      canvas.height * 0.08
+    );
+
+    requestAnimationFrame(gameLoop);
+  }
+
+  document.addEventListener('keydown', e => {
+    if (game.gameOver) {
+      game.gameOver = false;
+      game.score = 0;
+      game.obstacle.x = 1;
+      game.dragon.x = 0.1;
+      game.dragon.y = 0.8;
+      gameLoop();
+    } else if (!game.paused) {
+      if (
+        e.code === 'Space' ||
+        e.code === 'ArrowUp' ||
+        e.code === 'ArrowDown'
+      ) {
+        jump();
+      } else if (e.code === 'ArrowLeft') {
+        gameLoop();
+        moveDragon('left');
+      } else if (e.code === 'ArrowRight') {
+        moveDragon('right');
+      }
+    }
+  });
+
+  stopBtn.addEventListener('click', () => {
+    game.paused = true;
+  });
+
+  startBtn.addEventListener('click', () => {
+    gameLoop();
+    if (game.paused) {
+      game.paused = false;
+      gameLoop();
+    }
+  });
+</script>
