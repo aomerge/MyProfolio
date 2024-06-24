@@ -6,7 +6,7 @@
       "description": "Desarrolle una API RESFUL con Spring Boot, la cual permite a los usuarios agendar reuniones, en la cual se pueden agregar participantes, ver la disponibilidad de los mismos y enviar notificaciones por correo electronico.",
       "image": "./image/Meeting.jpeg",
       "link": "https://github.com/aomerge/Meeting",
-      "tags": ["java", "Postgres", "Spring Boot"]
+      "tags": ["Java", "Postgres", "Spring Boot"]
     },
     {
       "title": "React Clone ",
@@ -30,7 +30,8 @@
         "Entity Framework",
         "MVC",
         "Git",
-        "Doker"
+        "Doker",
+        ".NET"
       ]
     },
     {
