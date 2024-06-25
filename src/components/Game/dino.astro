@@ -1,6 +1,11 @@
-<section class="col-start-2">
-  <h1 class="text-3xl text-center font-bold text-orange-500">Dino Rush</h1>
-  <div id="controls" class="flex justify-between">
+<section class="col-start-1 w-full grid justify-center">
+  <h1 class="text-3xl text-center font-bold text-orange-500">Geometry Rush</h1>
+  <div class="flex justify-center">
+    <canvas
+      id="gameCanvas"
+      class="w-[600px] h-[300px] rounded-lg border border-gray-400"></canvas>
+  </div>
+  <div id="controls" class="mt-2 flex justify-between">
     <button class="border border-gray-400 py-1 px-4 rounded-lg" id="stopBtn"
       >Stop</button
     >
@@ -8,16 +13,21 @@
       >Start</button
     >
   </div>
-  <div class="flex justify-center">
-    <canvas
-      id="gameCanvas"
-      class="w-[600px] h-[300px] rounded-lg border border-gray-400"></canvas>
-  </div>
 </section>
 
 <script type="module">
   const canvas = document.getElementById('gameCanvas');
   const ctx = canvas.getContext('2d');
+  const imgDino = new Image();
+  imgDino.src = './image/geometriDashRun.png';
+  imgDino.onload = () => {
+    // Obtén el tamaño del canvas
+    const canvasWidth = canvas.width;
+    const canvasHeight = canvas.height;
+
+    // Dibuja la imagen ajustada al tamaño del canvas
+    ctx.drawImage(imgDino, 0, 0, canvasWidth, canvasHeight);
+  };
   const stopBtn = document.getElementById('stopBtn');
   const startBtn = document.getElementById('startBtn');
 
