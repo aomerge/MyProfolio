@@ -12,8 +12,9 @@ const Works = ({ type }) => {
   useEffect(() => {
     if (type === 2) {
       setProjects(data.blog);
-    }
+    }    
   }, [type]);
+
 
   const filteredProjects = projects.filter(project =>{    
     if (filterTag === "All") {
@@ -67,15 +68,17 @@ const Works = ({ type }) => {
           let i = index + 1;
           return (
             <CardWork
+              key={i}
               id={i}
               title={item.title}
               body={item.description}
               image={item.image}
-              url={item.url}
+              url={item.link}
               tags={item.tags}
             />
           );
         })}
+
         {filteredProjects.length === 0 && (
           <p className="w-[960px] max-w-6xl text-center text-gray-500">
             No projects found with the name "{filter}".
