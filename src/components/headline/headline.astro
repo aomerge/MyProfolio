@@ -17,36 +17,41 @@ const color = 'text-orange-500';
   const $buttonRigth = document.getElementById('ArrowRight');
 
   $buttonLefth.addEventListener('click', () => {
-    console.log('click');
     const slider = document.getElementById('ContentSlider');
-    console.log(slider);
-    slider.scrollLeft += 100;
+    slider.scrollLeft -= 1000;
   });
 
   $buttonRigth.addEventListener('click', () => {
-    console.log('click');
     const slider = document.getElementById('ContentSlider');
-    console.log(slider);
-    slider.scrollLeft -= 100;
+    slider.scrollLeft += 1000;
   });
 </script>
 
 <section
-  class="border border-gray-500 h-[400px] mb-16 mt-16 rounded-lg grid grid-cols-12"
+  class="border-2 border-gray-500 h-[400px] mb-16 mt-16 rounded-lg grid grid-cols-12"
 >
-  <button id="ArrowLeft" class="flex items-center justify-center">
+  <button
+    id="ArrowLeft"
+    class="bg-orange-500 rounded-l-md border-r-2 border-gray-500 flex items-center justify-center"
+  >
     <LeftArrow /></button
   >
   <div
-      id="ContentSlider"
-    class=" overflow-hidden col-start-2 col-end-12 justify-center items-center "
+    class="overflow-hidden col-start-2 col-end-12 justify-center items-center"
   >
-  <section style="grid-template-columns: repeat(2, 100%);" class=" scrollbar-hide scroll overflow-x-scroll grid">
-    <Tetris />
+    <section
+      id="ContentSlider"
+      style="grid-template-columns: repeat(2, 100%);"
+      class="scrollbar-hide scroll overflow-x-scroll grid"
+    >
     <Dino />
-  </section>
+    <Tetris />
+    </section>
   </div>
-  <button id="ArrowRight" class="flex items-center justify-center">
+  <button
+    id="ArrowRight"
+    class="border-l-2 rounded-r-md bg-orange-500 border-gray-500 flex items-center justify-center"
+  >
     <RigthArrow />
   </button>
 </section>
