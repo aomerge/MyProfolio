@@ -1,17 +1,17 @@
 {
   "projects": [
     {
-      "title": " Meeteng ",
+      "title": "Meeteng",
       "date": "2024",
-      "description": "Desarrolle una API RESFUL con Spring Boot, la cual permite a los usuarios agendar reuniones, en la cual se pueden agregar participantes, ver la disponibilidad de los mismos y enviar notificaciones por correo electronico.",
+      "description": "I developed a RESTful API with Spring Boot, which allows users to schedule meetings, where participants can be added, view their availability, and send email notifications.",
       "image": "./image/Meeting.jpeg",
       "link": "https://github.com/aomerge/Meeting",
       "tags": ["Java", "Postgres", "Spring Boot"]
     },
     {
-      "title": "React Clone ",
+      "title": "React Clone",
       "date": "2022",
-      "description": "Logre crear un clon del arbol de elementos del dom de React y hacer uso de useSatate para su uso con vanila Javascript. Consegi una correcta comunicacion entre elementos para su posterior utilizacion.",
+      "description": "I managed to create a clone of the React DOM tree and use useState for its use with vanilla JavaScript. I achieved correct communication between elements for their subsequent use.",
       "image": "./image/ReactClone.jpeg",
       "link": "https://github.com/aomerge/ReactClone",
       "tags": ["Typescript", "JavaScript", "HTML", "CSS"]
@@ -19,7 +19,7 @@
     {
       "title": "School ASP",
       "date": "2023",
-      "description": "SchoolAsp es una aplicación web desarrollada en ASP.NET, enfocada en aligerar la carga administrativa en instituciones educativas y fomentar la comunicación entre estudiantes, profesores y padres.",
+      "description": "SchoolAsp is a web application developed in ASP.NET, focused on easing the administrative burden in educational institutions and fostering communication between students, teachers, and parents.",
       "image": "./image/Schoolasp.jpeg",
       "link": "https://github.com/aomerge/SchoolAsp",
       "tags": [
@@ -30,30 +30,30 @@
         "Entity Framework",
         "MVC",
         "Git",
-        "Doker",
+        "Docker",
         ".NET"
       ]
     },
     {
       "title": "Avo Stored",
       "date": "2022",
-      "description": "Avo Stored es una aplicación de comercio electrónico web que desarrollé para la venta de aguacates de alta calidad.",
+      "description": "Avo Stored is a web e-commerce application that I developed for selling high-quality avocados.",
       "image": "./image/Avo.jpeg",
       "link": "https://github.com/aomerge/Avo-Stored",
       "tags": ["React", "Node.js", "Express", "NEXT JS", "Git"]
     },
     {
-      "title": "Solid Credit ",
+      "title": "Solid Credit",
       "date": "2022",
-      "description": "Solid Credit es una potente biblioteca que desarrollé para la generación de tablas de amortización de créditos.",
+      "description": "Solid Credit is a powerful library that I developed for generating credit amortization tables.",
       "image": "./image/SolidCredit.jpeg",
       "link": "https://github.com/aomerge/SolidCredit",
       "tags": ["Node.js", "Typescript", "Git"]
     },
     {
-      "title": "Tetris Rush ",
+      "title": "Tetris Rush",
       "date": "2022",
-      "description": "This repository hosts my personal rendition of the classic Tetris game, implemented entirely in Vanilla JavaScript. ",
+      "description": "This repository hosts my personal rendition of the classic Tetris game, implemented entirely in Vanilla JavaScript.",
       "image": "./image/TetrisRush.jpeg",
       "link": "https://github.com/aomerge/TetrisRush",
       "tags": ["Node.js", "JavaScript", "React", "Git"]
@@ -61,15 +61,15 @@
     {
       "title": "Pomodoro",
       "date": "2023",
-      "description": "Pomodoro es una aplicacion multiplataforma creada con React Native, que permite a los usuarios administrar su tiempo de manera eficiente.",
+      "description": "Pomodoro is a cross-platform application created with React Native, which allows users to manage their time efficiently.",
       "image": "./image/Pomodoro.jpg",
       "link": "https://github.com/aomerge/pomodoroApp",
       "tags": ["React Native", "Node.js", "Git"]
     },
     {
-      "title": "Zainab Porfolio",
+      "title": "Zainab Portfolio",
       "date": "2022",
-      "description": "Zainab Porfolio es una aplicación web que desarrollé para una diseñadora de Ux/Ui.",
+      "description": "Zainab Portfolio is a web application I developed for a UX/UI designer.",
       "image": "./image/Zainab.jpeg",
       "link": "https://github.com/aomerge/Zainab-Porfolio",
       "tags": ["NEXT", "REACT", "CSS", "HTML", "JAVASCRIPT"]
@@ -77,33 +77,49 @@
     {
       "title": "Cats and Dogs Classifier",
       "date": "2022",
-      "description": "Este es un Proyecto de clasificacion de imagenes, en este caso clasifique las imagenes de perros y gatos. Utilice una red neuronal convolucional para clasificar las imagenes.",
+      "description": "This is an image classification project; in this case, I classified images of cats and dogs using a convolutional neural network.",
       "image": "./image/cat-dog.jpeg",
       "link": "https://github.com/aomerge/Classification-Cats-Dogs",
       "tags": ["Python", "Tensorflow", "Keras", "Git"]
+    },
+    {
+      "title": "Pockedex",
+      "date": "2022",
+      "description": "Pockedex is a web application I developed for displaying information about Pokémon. It features management of the Pokémon saved in your gallery and a user registry. This application consumes data from a public external API and registers the data in an internal API developed to guarantee users' data availability and security.",
+      "image": "image",
+      "link": "https://github.com/aomerge/Pockedex",
+      "tags": ["React Native", "Express", "Node.js", "Git"]
+    },
+    {
+      "title": "UX Designer Project",
+      "date": "2022",
+      "description": "This project is part of the MAUI course project, where the user interface of a fast food restaurant application was developed, using the application's design in Figma and developing the application in Xamarin.",
+      "image": "image",
+      "link": "link",
+      "tags": ["Xamarin", "Figma", ".NET", "MAUI", "Git"]
     }
   ],
   "blog": [
     {
-      "title": "Aprendiendo Flexbox",
+      "title": "Learning Flexbox",
       "date": "2024",
-      "description": "Flexbox es un módulo de CSS que proporciona una manera eficiente de diseñar interfaces de usuario complejas y responsivas.",
+      "description": "Flexbox is a CSS module that provides an efficient way to design complex and responsive user interfaces.",
       "image": "https://media.licdn.com/dms/image/D4E12AQEDwaOgu_lGNQ/article-cover_image-shrink_423_752/0/1712909821353?e=1720656000&v=beta&t=S9DXf4JF9DtdurpNtDmZdwumHJarQoUvDrRVqyqt0mk",
       "link": "https://www.linkedin.com/pulse/aprendiendo-flexbox-t%25C3%25A9cnicas-y-ejemplos-para-un-dise%25C3%25B1o-%25C3%25A1ngel-ortega-qssye/",
       "tags": ["React", "JavaScript", "HTML", "CSS"]
     },
     {
-      "title": "Diferencias entre Índices y Vistas en SQL",
+      "title": "Differences between Indexes and Views in SQL",
       "date": "2024",
-      "description": "En bases de datos SQL, los índices y las vistas son esenciales para mejorar el rendimiento de las consultas y la organización de los datos.",
+      "description": "In SQL databases, indexes and views are essential for improving query performance and data organization.",
       "image": "https://media.licdn.com/dms/image/D4E12AQEkF3Foh4n-fg/article-cover_image-shrink_423_752/0/1712712533174?e=1720656000&v=beta&t=LJKg-KQhbCaacNsM__7F30SAiWiTThnot1xt1S5UL24",
       "link": "https://www.linkedin.com/pulse/diferencias-entre-%25C3%25ADndices-y-vistas-en-sql-mejorando-el-%25C3%25A1ngel-ortega-zqote/",
       "tags": ["SQL"]
     },
     {
-      "title": "Técnicas de optimización de almacenamiento en SQL.",
+      "title": "Techniques for Storage Optimization in SQL",
       "date": "2024",
-      "description": "La gestión eficiente del almacenamiento en bases de datos SQL es clave para un rendimiento óptimo, escalabilidad y reducción de costos.",
+      "description": "Efficient storage management in SQL databases is key for optimal performance, scalability, and cost reduction.",
       "image": "https://media.licdn.com/dms/image/D4E12AQEkF3Foh4n-fg/article-cover_image-shrink_423_752/0/1712712533174?e=1720656000&v=beta&t=LJKg-KQhbCaacNsM__7F30SAiWiTThnot1xt1S5UL24",
       "link": "https://www.linkedin.com/pulse/implementaci%25C3%25B3n-pr%25C3%25A1ctica-de-t%25C3%25A9cnicas-optimizaci%25C3%25B3n-en-sql-%25C3%25A1ngel-ortega-panse/",
       "tags": ["SQL"]
@@ -111,9 +127,9 @@
   ],
   "inDeveloper": [
     {
-      "title": "API Ecommerce ",
+      "title": "API Ecommerce",
       "date": "2022",
-      "description": "Este es un Proyecto de API Restful desarrollado en Node.js, Express y MongoDB. La API permite a los usuarios realizar operaciones CRUD en una base de datos de productos.",
+      "description": "This is a Restful API project developed in Node.js, Express, and MongoDB. The API allows users to perform CRUD operations on a product database.",
       "image": "image",
       "link": "https://github.com/aomerge/API-Ecommerce",
       "tags": ["Node.js", "Express", "MongoDB", "Git"]
@@ -121,41 +137,25 @@
     {
       "title": "API Inventory Manager",
       "date": "2022",
-      "description": "Este es un Proyecto de un Inventary Manager, creado con express y un ORM de base de datos.",
+      "description": "This is a Project for an Inventory Manager, created with Express and a database ORM.",
       "image": "image",
       "link": "link",
       "tags": ["Node.js", "Express", "Sequelize", "Git"]
     },
     {
       "id": 7,
-      "title": "GPTBOT ",
+      "title": "GPTBOT",
       "date": "2022",
       "description": "Subsurface weight, specular roughness, diffuse maps generated with the procedure and manual techniques.",
       "image": "image",
       "link": "link"
     },
     {
-      "title": "Whats App bot",
+      "title": "WhatsApp bot",
       "date": "2022",
       "description": "Subsurface weight, specular roughness, diffuse maps generated with the procedure and manual techniques.",
       "image": "image",
       "link": "link"
-    },
-    {
-      "title": "Pockedex",
-      "date": "2022",
-      "description": "Pockedex es una aplicación web que desarrollé para la visualización de información sobre Pokémon , cuanta con una administracion de los pokemons guardados en tu galeria y un registro de usuario. Esta aplicación consume datos de una API externa publica y hace el registro de los datos en una api interna desarrollada para poder rantizar a los usuarios la disponibilidad y la seguridad de los datos.",
-      "image": "image",
-      "link": "https://github.com/aomerge/Pockedex",
-      "tags": ["React Native", "Express", "Node.js", "Git"]
-    },
-    {
-      "title": "UX Designer Proyect",
-      "date": "2022",
-      "description": "Este proyecto es parte del proyecto del curso de MAUI, en el cual se desarrollo la interface de usuario de una aplicacion de un restauirante de comida rapida, en el cual se utilizo el diseño de la aplicacion en Figma y se desarrollo la aplicacion en Xamarin.",
-      "image": "image",
-      "link": "link",
-      "tags": ["Xamarin", "Figma", ".NET", "MAUI", "Git"]
-    }
+    }    
   ]
 }
