@@ -1,0 +1,43 @@
+---
+import Articles from "../index/articles"
+
+---
+<div class="relative overflow-hidden">    
+    <h2 class="text-4xl font-bold text-center text-blue-800">Blog</h2>
+    <p class="text-center mt-2">
+        En esta sección encontrarás artículos sobre tecnología, desarrollo de software, DevOps, Linux y mucho más.
+    </p>
+
+    <div id="slider" class=" mt-20 flex transition-transform duration-500 ease-out">        
+        <Articles />
+        
+    </div>
+
+    <!-- Slider Controls -->
+    <div class="relative top-[-25px] inset-0 flex justify-center opacity-90  items-center gap-20 z-30 ">
+        <button id="prevBtn" class="bg-blue-800 shadow-blue-950 text-white px-4 py-3 rounded-full shadow-md hover:bg-blue-950">←</button>
+        <button id="nextBtn" class="bg-blue-800 text-white px-4 shadow-blue-950 py-3 rounded-full shadow-md hover:bg-blue-950">→</button>
+    </div>
+</div>
+
+<script type="module">
+    const slider = document.getElementById('slider');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    let currentIndex = 0;
+
+    nextBtn.addEventListener('click', () => {
+        if (currentIndex < 2) { 
+            currentIndex++;
+            slider.style.transform = `translateX(-${currentIndex * 50}%)`;
+        }
+    });
+
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            slider.style.transform = `translateX(-${currentIndex * 50}%)`;
+        }
+    });
+</script>

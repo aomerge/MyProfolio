@@ -3,18 +3,19 @@ import Layout from '../layouts/Layout.astro';
 import Headerline from '../components/headline/headline.astro';
 import Arrow from '../components/button/arrow.astro';
 import Works from '../components/works';
+import About from '../components/index/about.astro';
+import Slider from '../components/index/slider.astro';
+import PortfolioSection from '../components/index/porfolio'
+import Blog from '../components/index/blog.astro';
 ---
 
 <Layout page="work" title="Run Porfolio">
-  <main class=" max-w-6xl text-cyan-50 grid grid-cols-12 justify-center">
-    <section class=" col-start-2 col-end-12 z-20  bg-transparent">
-      <Headerline
-        title="Hi there 👋, I’m Angel Ortega."
-        body="Soy un desarrollador de software con una trayectoria demostrada en la creación de soluciones tecnológicas innovadoras y eficientes."
-      />
-      
-      <Arrow />
-      <Works type={1} client:load />
+  <main class=" max-w-6xl text-cyan-50 grid grid-cols-1 w-3/4 mt-10   justify-center">
+    <section class=" col-start-1 col-end-12 z-20  w-full text-blue-950 ">                  
+      <Slider />
+      <About title="About me" description="I am a software developer with experience in Java and C# technologies, I have worked with Linux and DevOps tools. I am passionate about learning new technologies and sharing knowledge with the community. I am a fan of open source and I am always looking for new challenges." />
+      <Blog />
+      <PortfolioSection type={1} client:load />
     </section>
   </main>
 </Layout>
