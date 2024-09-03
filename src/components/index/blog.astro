@@ -1,16 +1,16 @@
 ---
-import Articles from "../index/articles"
+import Articles from "../index/articles";
+import data from "../data/data.json";
 
 ---
 <div class="relative overflow-hidden">    
     <h2 class="text-4xl font-bold text-center text-blue-800">Blog</h2>
-    <p class="text-center mt-2">
-        En esta sección encontrarás artículos sobre tecnología, desarrollo de software, DevOps, Linux y mucho más.
+    <p class="text-center mt-2 max-sm:text-justify">
+        In this section, you will find a wide range of articles covering topics such as technology, software development, DevOps, Linux, and much more. These articles are designed to provide valuable insights, tips, and updates on the latest trends and best practices in the industry, catering to both beginners and experienced professionals alike.
     </p>
 
     <div id="slider" class=" mt-20 flex transition-transform duration-500 ease-out">        
         <Articles />
-        
     </div>
 
     <!-- Slider Controls -->
@@ -21,6 +21,7 @@ import Articles from "../index/articles"
 </div>
 
 <script type="module">
+    const slide = document.getElementById('arcicle');
     const slider = document.getElementById('slider');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
@@ -28,16 +29,16 @@ import Articles from "../index/articles"
     let currentIndex = 0;
 
     nextBtn.addEventListener('click', () => {
-        if (currentIndex < 2) { 
+        if (currentIndex < 3 - 1) { 
             currentIndex++;
-            slider.style.transform = `translateX(-${currentIndex * 50}%)`;
+            arcicle.clientWidth < 400 ? slider.style.transform = `translateX(-${currentIndex * 105}%)` : slider.style.transform = `translateX(-${currentIndex * 50}%)`;
         }
     });
 
     prevBtn.addEventListener('click', () => {
         if (currentIndex > 0) {
             currentIndex--;
-            slider.style.transform = `translateX(-${currentIndex * 50}%)`;
+            arcicle.clientWidth < 400 ? slider.style.transform = `translateX(-${currentIndex * 105}%)` : slider.style.transform = `translateX(-${currentIndex * 50}%)`;
         }
     });
 </script>

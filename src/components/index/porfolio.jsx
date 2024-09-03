@@ -32,9 +32,9 @@ const PortfolioSection = ({ type }) => {
         <h2 className=" mb-5 text-5xl text-blue-900 font-bold text-center">
           {type === 1 ? 'Projects' : 'Blog'}
         </h2>
-        <p className="text-center text-gray-500 mb-9 w-1/2">
+        <p className="text-center text-gray-500 mb-9 w-1/2 max-sm:w-full">
           {type === 1
-            ? 'A lo largo de mi carrera, he tenido la oportunidad de participar en una variedad de proyectos desafiantes y emocionantes que abarcan diversas industrias y tecnologías. Cada proyecto ha sido una oportunidad para aprender, innovar y superar expectativas.'
+            ? 'Throughout my career, I have had the opportunity to participate in a variety of challenging and exciting projects across different industries and technologies. Each project has been an opportunity to learn, innovate, and exceed expectations.'
             : 'Here are some of the blog posts I have written.'
           }
         </p>
@@ -53,7 +53,7 @@ const PortfolioSection = ({ type }) => {
       <div className="bg-transparent w-full flex justify-end mb-3">
         <select
           id="carSelect"
-          className=" bg-[#103d6a] text-blue-100 text-center rounded-md bg-transparent"
+          className=" bg-[#103d6a] text-blue-100 text-center rounded-md "
           value={filterTag}
           onChange={e => setFilterTag(e.target.value)}
         >
@@ -65,7 +65,7 @@ const PortfolioSection = ({ type }) => {
           <option value="Python">Python</option>
         </select>
       </div>
-      <section id="projects" className="grid grid-cols-2 gap-5">
+      <section id="projects" className="grid grid-cols-2 max-sm:grid-cols-1 gap-5">
         {filteredProjects.map((item, index) => {
           let i = index + 1;
           return (
@@ -82,7 +82,7 @@ const PortfolioSection = ({ type }) => {
         })}
 
         {filteredProjects.length === 0 && (
-          <p className="w-[960px] max-w-6xl text-center text-gray-500">
+          <p className="w-[960px] max-sm:w-full max-w-6xl text-center text-gray-500">
             No projects found with the name "{filter}".
           </p>
         )}

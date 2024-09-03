@@ -9,42 +9,45 @@ const orange = 'text-blue-800';
 ---
 <section class=" mt-40 flex justify-between gap-10 pb-32">
     <div class="w-2/3 max-sm:w-full">
-      <h2 class={' font-bold text-5xl w-5/7 mb-10 ' + orange}>{title}</h2>
+      <h2 class={' font-bold text-5xl w-5/7 mb-10 max-sm:text-4xl ' + orange}>{title}</h2>
       {
         descriptionArray.map(paragraph => {
           return <p class="mb-5 w-5/10">{paragraph}</p>;
         })
       }
       <section class="">
-        <div class="mt-14 grid grid-cols-2 gap-5 justify-center items-center">
+        <div class="mt-14 max-sm:block grid grid-cols-2 gap-5 justify-center items-center">
           <h3
-            class={' border-b-2 border-gray-400 w-2/3 pb-2 row-start-1 row-end-3 font-medium text-2xl ' +
+            class={' max-sm:mb-5 border-b-2 border-gray-400 w-2/3 pb-2 row-start-1 row-end-3 font-medium text-2xl ' +
               orange}
           >
-            Main Softwere
+           Softwere Skills 
           </h3>
-          <p>
-            <span class={orange}>Frontend:</span> React, Next.js, TailwindCSS, Typescript
+          <p class="max-sm:mb-2">
+            <span class={orange}>Frontend:</span> React, Next.js, TailwindCSS, Typescript, javaScript, NPM
           </p>
-          <p class="col-start-2">
-            <span class={orange}>Backend:</span> .NET, C#, jAVA, Spring, Entity Framework,
-            SQL, MongoDB, Postgres, MYSQL
+          <p class="max-sm:mb-2 col-start-2">
+            <span class={orange}>Backend:</span> .NET, C#, JAVA, Spring, Entity Framework,
+            SQL, MongoDB, Postgres, MYSQL, REST
+          </p>
+          <p class="max-sm:mb-2 col-start-2">
+            <span class={orange}>Movile:</span> React Native, Java, MAUI, Xamarin
           </p>
         </div>
-        <div class="mt-20 grid grid-cols-2 gap-5 justify-center items-center">
+        <div class=" max-sm:block mt-20 grid grid-cols-2 gap-5 justify-center items-center">
           <h3
-            class={' border-b-2 border-gray-400 w-2/3 pb-2 font-medium text-2xl row-end-4 row-start-1 ' +
+            class={' max-sm:mb-5 border-b-2 border-gray-400 w-2/3 pb-2 font-medium text-2xl row-end-4 row-start-1 ' +
               orange}
           >
             Main skills
-          </h3>
-          <p>
-            <span class={orange}>Networking:</span> Good comunication
+          </h3>          
+          <p class="max-sm:mb-2">
+            <span class={orange}>Languages:</span> English (B1), Spanish (Native)
           </p>
-          <p>
-            <span class={orange}>Languages:</span> English (A2), Spanish (Native)
+          <p class="max-sm:mb-2">
+            <span class={orange}>Cloud:</span> Azure, Google Cloud
           </p>
-          <p>
+          <p class="max-sm:mb-2">
             <span class={orange}>Other:</span> Git, Docker, Linux, Agile, Scrum, Kanban,
             GitActions
           </p>
