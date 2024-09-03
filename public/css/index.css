@@ -2,3 +2,9 @@
   background-color: #0D1117;
   color: orange;
 }
+
+.custom_gradient_blue {
+  background-color: #f1f7fe;
+  background-image: radial-gradient(circle at 83% 16%, #40a3f0 5.574136008918618%, transparent 64.64697115928965%), radial-gradient(circle at 2% 100%, #bdddfa 0%, transparent 50%), radial-gradient(circle at 0% 50%, hsla(355, 100%, 93%, 0) 0%, transparent 50%), radial-gradient(circle at 80% 50%, hsla(340, 100%, 76%, 0) 0%, transparent 50%), radial-gradient(circle at 0% 100%, hsla(22, 100%, 77%, 0) 0%, transparent 50%), radial-gradient(circle at 80% 100%, hsla(242, 100%, 70%, 0) 0%, transparent 50%), radial-gradient(circle at 0% 0%, hsla(343, 100%, 76%, 0) 0%, transparent 50%);
+  background-blend-mode: normal, normal, normal, normal, normal, normal, normal;
+}
