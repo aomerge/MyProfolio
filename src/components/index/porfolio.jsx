@@ -21,6 +21,7 @@ const PortfolioSection = ({ type }) => {
       return project.title.toLowerCase().includes(filter.toLowerCase());
     }
     if (filterTag !== 1) {
+      console.log(filterTag);
       return project.tags.includes(filterTag);
     } 
     return project.title.toLowerCase().includes(filter.toLowerCase());

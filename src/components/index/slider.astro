@@ -28,9 +28,7 @@
       function detectLanguage() {
         const userLang = navigator.language || navigator.userLanguage;
         return userLang.split('-')[0]; // Nos quedamos solo con la parte principal (ej. 'es' de 'es-ES')
-        }
-    console.log("lenguage",detectLanguage());
-    console.log("lenguage",detectLanguage() === 'es' ? 'es' : 'en');
+        }    
     document.getElementById('CvPDF').addEventListener('click', function() {
             
             const cvURL = detectLanguage() === 'es' ? './image/Backend_Developer_es.pdf' : './image/Backend_Developer_en.pdf';             

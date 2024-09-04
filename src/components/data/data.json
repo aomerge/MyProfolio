@@ -9,7 +9,19 @@
       "tags": ["Compiler Design", "Programming Languages", "ANTLR", "Interpreter", "Virtual Machine", "Cross-Platform"]
     },
     {
-
+      "title": "Bibliotech",
+      "date": "2024",
+      "description": "As a developer in the Bibliotech project, I designed a microservices architecture with a focus on scalability as the database engine, using MongoDB, organized into three specific databases: users, books, and book rentals, optimizing data management and scalability.",
+      "image": "./image/CustomLanguage.jpeg",
+      "link": "https://github.com/aomerge/bibliotech",
+      "tags": ["Java", "Spring Boot", "MongoDB", "Docker", "CI/CD", "Security", "Microservices"]
+    },
+    {
+      "title": "IBook",
+      "date": "2024",
+      "description": "IBook is a simple application for managing and publishing book rental records. Built with Vanilla Java and Apache Tomcat, this project integrates a public API to display available books while managing user registrations and book delivery systems.",      
+      "link": "https://github.com/aomerge/IBook",
+      "tags": ["Java", "Apache Tomcat", "MVC", "JSP", "JDBC", "HTML", "CSS", "JavaScript"]
     },
     {
       "title": "Meeteng",
@@ -92,6 +104,14 @@
       "image": "./image/cat-dog.jpeg",
       "link": "https://github.com/aomerge/Classification-Cats-Dogs",
       "tags": ["Python", "Tensorflow", "Keras", "Git"]
+    },
+    {
+      "title": "Logging API",
+      "date": "2022",
+      "description": "This is a project for a logging API, created with Express and a database ORM.",
+      "image": "image",
+      "link": "https://github.com/aomerge/loginapi",
+      "tags": ["C#", ".NET", "Entity Framework", "Git"]
     },
     {
       "title": "Pockedex",
