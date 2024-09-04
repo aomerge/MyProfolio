@@ -1,6 +1,17 @@
 {
   "projects": [
     {
+      "title": "Custom Programming Language",
+      "date": "2024",
+      "description": "I led the development of a new custom programming language from scratch, focusing on simplicity, expressiveness, and performance.",
+      "image": "./image/CustomLanguage.jpeg",
+      "link": "https://github.com/aomerge/Interpreted-Programing-Language",
+      "tags": ["Compiler Design", "Programming Languages", "ANTLR", "Interpreter", "Virtual Machine", "Cross-Platform"]
+    },
+    {
+
+    },
+    {
       "title": "Meeteng",
       "date": "2024",
       "description": "I developed a RESTful API with Spring Boot, which allows users to schedule meetings, where participants can be added, view their availability, and send email notifications.",
@@ -156,6 +167,7 @@
       "description": "Subsurface weight, specular roughness, diffuse maps generated with the procedure and manual techniques.",
       "image": "image",
       "link": "link"
-    }    
+    }
+    
   ]
 }
